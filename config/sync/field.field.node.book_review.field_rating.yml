@@ -1,0 +1,23 @@
+uuid: ab3f8d4e-95a6-4b0f-9db4-5200b8e8136e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating
+    - node.type.book_review
+id: node.book_review.field_rating
+field_name: field_rating
+entity_type: node
+bundle: book_review
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

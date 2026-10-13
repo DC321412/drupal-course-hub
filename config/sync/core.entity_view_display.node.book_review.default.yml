@@ -1,0 +1,47 @@
+uuid: fba91663-de5d-47eb-9b19-691786809f74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.book_review.field_author
+    - field.field.node.book_review.field_rating
+    - field.field.node.book_review.field_review
+    - node.type.book_review
+  module:
+    - user
+id: node.book_review.default
+targetEntityType: node
+bundle: book_review
+mode: default
+content:
+  field_author:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_rating:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_review:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

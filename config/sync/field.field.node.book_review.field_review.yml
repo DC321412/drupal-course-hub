@@ -1,0 +1,19 @@
+uuid: 4821cf4e-bcc4-43ca-b799-bd8b22cdb2e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review
+    - node.type.book_review
+id: node.book_review.field_review
+field_name: field_review
+entity_type: node
+bundle: book_review
+label: Review
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
