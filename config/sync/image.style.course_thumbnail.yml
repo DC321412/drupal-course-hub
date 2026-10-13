@@ -1,0 +1,15 @@
+uuid: 98ad8da9-b2fa-4134-bbed-28c8173dc2fc
+langcode: en
+status: true
+dependencies: {  }
+name: course_thumbnail
+label: 'Course Thumbnail'
+effects:
+  68c77732-3ebf-4488-8e73-d461eb39932f:
+    uuid: 68c77732-3ebf-4488-8e73-d461eb39932f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 250
+      anchor: center-center
