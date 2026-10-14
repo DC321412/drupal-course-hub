@@ -5,3 +5,8 @@
 /web/sites/*/settings*.php
 /web/sites/*/files/.DS_Store
 web/sites/default/files/
+
+web/sites/default/settings.local.php
+web/sites/default/development.services.yml
+web/.DS_Store
+web/default/files/.ht.sqlite
