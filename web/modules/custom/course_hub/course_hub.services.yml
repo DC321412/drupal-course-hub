@@ -1,0 +1,4 @@
+services:
+  course_hub.course_manager:
+    class: Drupal\course_hub\Service\CourseManager
+    arguments: ['@entity_type.manager']

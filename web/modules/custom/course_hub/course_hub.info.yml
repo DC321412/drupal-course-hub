@@ -1,0 +1,8 @@
+name: Course Hub
+type: module
+description: Custom page, form, service and block for the Course Hub site.
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:block

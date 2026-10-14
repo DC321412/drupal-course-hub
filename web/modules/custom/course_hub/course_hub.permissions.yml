@@ -1,0 +1,8 @@
+access course hub:
+  title: 'Access Course Hub'
+  description: 'View the Course Hub page and block.'
+
+administer course hub:
+  title: 'Administer Course Hub'
+  description: 'Add courses through the Course Hub form.'
+  restrict access: true
