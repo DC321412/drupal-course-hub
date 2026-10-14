@@ -4,3 +4,4 @@
 /web/themes/contrib/
 /web/sites/*/settings*.php
 /web/sites/*/files/.DS_Store
+web/sites/default/files/
