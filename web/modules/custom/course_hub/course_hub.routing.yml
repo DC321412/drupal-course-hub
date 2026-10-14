@@ -1,0 +1,15 @@
+course_hub.page:
+  path: '/course-hub'
+  defaults:
+    _controller: '\Drupal\course_hub\Controller\CourseHubController::page'
+    _title: 'Course Hub'
+  requirements:
+    _permission: 'access course hub'
+
+course_hub.add_course:
+  path: '/course-hub/add'
+  defaults:
+    _form: '\Drupal\course_hub\Form\AddCourseForm'
+    _title: 'Add a course'
+  requirements:
+    _permission: 'administer course hub'
