@@ -24,6 +24,46 @@ function course_theme_preprocess_page(array &$variables): void {
 /**
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
-function course_theme_preprocess_node(array &$variables): void {
 
+
+
+
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function course_theme_preprocess_node(array &$variables): void {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['node'];
+
+  if ($node->bundle() !== 'course') {
+    return;
+  }
+
+  // Estimated reading time from the description (about 200 words a minute).
+  $text = '';
+  if ($node->hasField('field_description') && !$node->get('field_description')->isEmpty()) {
+    $text = strip_tags((string) $node->get('field_description')->value);
+  }
+  $variables['reading_time'] = max(1, (int) ceil(str_word_count($text) / 200));
+
+  // Featured courses are the ones promoted to the front page.
+  $variables['is_featured'] = $node->isPromoted();
+  if ($variables['is_featured']) {
+    $variables['attributes']['class'][] = 'is-featured';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function course_theme_theme_suggestions_node_alter(array &$suggestions, array $variables): void {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['elements']['#node'];
+  $view_mode = $variables['elements']['#view_mode'];
+
+  if ($node->bundle() === 'course' && $node->isPromoted() && $view_mode === 'teaser') {
+    $suggestions[] = 'node__course__teaser__featured';
+  }
 }

@@ -27,3 +27,21 @@
     margin-top: 0;
   }
 }
+/* Featured course card (teaser) */
+.course-card--featured {
+  border-left: 4px solid #0b5fff;
+}
+
+.course-card__badge {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  background: #0b5fff;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.course-card__meta {
+  color: #5b6178;
+  font-size: 0.9rem;
+}
