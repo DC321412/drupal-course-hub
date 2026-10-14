@@ -2,6 +2,9 @@
 global:
   js:
     js/course-theme.js: {}
+  dependencies:
+    - core/drupal
+    - core/once  
   css:
     base:
       css/base/site.css: {}

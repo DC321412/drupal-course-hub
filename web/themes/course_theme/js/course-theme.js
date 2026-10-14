@@ -2,16 +2,26 @@
  * @file
  * Course Theme behaviors.
  */
-(function (Drupal) {
+((Drupal, once) => {
+  Drupal.behaviors.courseThemeBackToTop = {
+    attach(context) {
+      once('back-to-top', 'body', context).forEach((body) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'back-to-top';
+        button.textContent = Drupal.t('Back to top');
+        button.hidden = true;
 
-  'use strict';
+        button.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-  Drupal.behaviors.courseTheme = {
-    attach (context, settings) {
+        window.addEventListener('scroll', () => {
+          button.hidden = window.scrollY < 300;
+        });
 
-      console.log('It works!');
-
-    }
+        body.appendChild(button);
+      });
+    },
   };
-
-} (Drupal));
+})(Drupal, once);
