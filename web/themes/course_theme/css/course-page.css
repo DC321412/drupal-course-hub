@@ -1,0 +1,47 @@
+.course-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.course-page__media img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.course-page__body {
+  margin-top: 1rem;
+}
+
+/* Tablet and up: image beside the text */
+@media (min-width: 768px) {
+  .course-page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .course-page__body {
+    margin-top: 0;
+  }
+}
+/* Featured course card (teaser) */
+.course-card--featured {
+  border-left: 4px solid #0b5fff;
+}
+
+.course-card__badge {
+  display: inline-block;
+  padding: 0.15rem 0.7rem;
+  background: #0b5fff;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.course-card__meta {
+  color: #5b6178;
+  font-size: 0.9rem;
+}

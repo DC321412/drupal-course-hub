@@ -1,0 +1,15 @@
+{{ attach_library('course_theme/course-page') }}
+<article{{ attributes.addClass('course-card', 'course-card--featured') }}>
+  <span class="course-card__badge">{{ 'Featured'|t }}</span>
+
+  <h2{{ title_attributes }}>
+    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+  </h2>
+
+  <p class="course-card__meta">{{ reading_time }} {{ 'min read'|t }}</p>
+
+  {{ content.field_image }}
+  {{ content.field_description }}
+  {{ content|without('field_image', 'field_description', 'links') }}
+  {{ content.links }}
+</article>

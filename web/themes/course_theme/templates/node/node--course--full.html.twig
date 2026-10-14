@@ -1,0 +1,16 @@
+{{ attach_library('course_theme/course-page') }}
+
+<article{{ attributes.addClass('course-page') }}>
+
+  {% if content.field_image %}
+    <div class="course-page__media">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+
+  <div class="course-page__body">
+    {{ content.field_description }}
+    {{ content|without('field_image', 'field_description') }}
+  </div>
+
+</article>

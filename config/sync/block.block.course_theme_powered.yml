@@ -1,0 +1,22 @@
+uuid: f937a121-03f0-4f24-ad0d-a8c30fc1ab01
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - course_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: course_theme_powered
+theme: course_theme
+region: footer
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
