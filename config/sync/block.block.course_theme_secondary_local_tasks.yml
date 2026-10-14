@@ -1,0 +1,22 @@
+uuid: 7fcc9e4e-9098-4e2e-9f60-fea6d6ed2ad2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - course_theme
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: course_theme_secondary_local_tasks
+theme: course_theme
+region: header
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

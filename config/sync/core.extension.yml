@@ -43,4 +43,6 @@ module:
 theme:
   olivero: 0
   claro: 0
+  course_theme: 0
+  stable9: 0
 profile: standard
