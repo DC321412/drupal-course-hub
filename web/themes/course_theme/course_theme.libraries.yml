@@ -4,6 +4,7 @@ global:
     js/course-theme.js: {}
   css:
     base:
+      css/base/site.css: {}
       css/base/elements.css: {}
     component:
       css/component/block.css: {}
@@ -22,3 +23,8 @@ global:
       css/layout/layout.css: {}
     theme:
       css/theme/print.css: { media: print }
+
+course-page:
+  css:
+    theme:
+      css/course-page.css: {}
