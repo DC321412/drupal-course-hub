@@ -1,0 +1,14 @@
+/* Keep form fields inside the screen on small devices */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+select,
+textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
