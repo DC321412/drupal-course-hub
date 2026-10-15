@@ -9,4 +9,5 @@ web/sites/default/files/
 web/sites/default/settings.local.php
 web/sites/default/development.services.yml
 web/.DS_Store
-web/default/files/.ht.sqlite
+web/default/files/.ht.sqlite.DS_Store
+web/default/files/.ht.sqlite*
